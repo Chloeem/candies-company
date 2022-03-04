@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals');
 const User = require('./user');
 
 describe('User', () => {

@@ -1,8 +1,5 @@
 const UserBase = require('./userbase');
 const User = require('./user');
-const { it, expect } = require('@jest/globals');
-// const { expect } = require('@jest/globals');
-// const { it } = require('jest-circus');
 
 describe('UserBase', () => {
   const users = [
