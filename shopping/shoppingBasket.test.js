@@ -22,7 +22,9 @@ describe('ShoppingBasket', () => {
   });
 
   it('Returns the total price of three candies', () => {
-    const candy = new Candy('Mars', 4.99);
-    basket.addItem(candy);
+    basket.addItem(new Candy('Skittle', 3.99));
+    basket.addItem(new Candy('Skittle', 3.99));
+
+    expect(basket.getTotalPrice()).toBe(12.97);
   });
 })

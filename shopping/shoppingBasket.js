@@ -1,4 +1,4 @@
-const Candy = require('./candy')
+const Candy = require('./candy');
 
 class ShoppingBasket {
   constructor() {
@@ -10,13 +10,13 @@ class ShoppingBasket {
 
     const total = this.contents.map(amount => {
       return amount.getPrice();
-    })
+    });
     
-    // .reduce((a, b) => {
-    //   return a + b, sum;
-    // });
+    total.reduce(function(a, b) {
+      return a + b;
+    });
 
-    return Number(total);
+    // return Number(total); // if this is commented out the output is "undefined"
   };
 
   addItem(candy) {
