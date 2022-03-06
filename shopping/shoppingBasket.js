@@ -6,17 +6,11 @@ class ShoppingBasket {
   };
 
   getTotalPrice() {
-    // const sum = 0;
-
     const total = this.contents.map(amount => {
       return amount.getPrice();
-    });
-    
-    total.reduce(function(a, b) {
-      return a + b;
-    });
+    }).reduce((a, b) => a + b, 0);
 
-    // return Number(total); // if this is commented out the output is "undefined"
+    return Number(total); 
   };
 
   addItem(candy) {
